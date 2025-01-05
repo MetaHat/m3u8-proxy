@@ -7,7 +7,7 @@ Some m3u8 files require special headers as well as CORS. This project achieves t
 ## Installation
 1. Clone the repository.
 ```bash
-git clone https://github.com/hase0278/hase0278-m3u8-proxy.git
+git clone https://github.com/MetaHat/m3u8-proxy.git
 ```
 2. Run `npm i`.
 3. Run `npm run build`.
@@ -24,7 +24,7 @@ PORT="3030"
 
 ## Instant deploy
 Vercel
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/hase0278/hase0278-m3u8-proxy)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/MetaHat/m3u8-proxy)
 
 ## Usage
 To proxy m3u8 files, use the `/m3u8-proxy` route. All you have to do is input the URL and headers. For example:
@@ -33,5 +33,4 @@ http://localhost:3030/m3u8-proxy?url=https%3A%2F%2Fs9xshtqmeip.cdn-jupiter.com%2
 ```
 The URL in this case is `https://www032.vipanicdn.net/streamhls/b9bf60933960deb9a5ddbc93adba8423/ep.4.1721922175.1080.m3u8` and the headers are `{"Referer": "https://s3taku.com"}`. This will then send a request to the m3u8 using the headers, modify the content to use the proxy, then proxy each ts file using a CORS proxy.
 
-## Credit
-TS proxy is inspired by [this](https://github.com/Eltik/M3U8-Proxy) repository. m3u8 proxy is a refactored version of [this](https://github.com/Gratenes/m3u8CloudflareWorkerProxy) for use outside of cloudflare worker.
+
